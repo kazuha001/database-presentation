@@ -98,7 +98,7 @@
                         <button type="submit">Submit</button>
                     </div>
                     
-                    <a href="index.html">About 2nd Normal Form</a>
+                    <a href="index.html">About 1st Normal Form and 2nd Normal Form</a>
                 </form>
             </div>
         </div>
