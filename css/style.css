@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tables {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin: 15px;
+}
+.tables h1 {
+    margin: 0px 0px 15px 0px;
+}
+.tables table {
+    width: 100%;
+    height: auto;
+    background-color: #ff0;
+    border-radius: 10px;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+.tables th {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.tables td {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    text-align: center;
+}
+.tables button {
+    width: 90%;
+    height: 25px;
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.tables button:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0px 0px 5px 3px #000;
+}
+.newBooks {
+    width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-color: #0ff;
+    margin: 20px 0 0 0;
+    border: 2px solid #000;
+}
+.newBooks h1 {
+    margin: 15px;
+    text-align: center;
+}
+.newBooks form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+.newBooks label {
+    font-size: 18px;
+    margin: 10px;
+    transition: 1s ease-in-out;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.newBooks label:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0px 0px 10px 5px #000;
+}
+.newBooks input {
+    width: 100%;
+    height: 30px;
+    margin: 2px 0 0 0;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+.buttons {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons button {
+    width: 20%;
+    height: 25px;
+    margin: 15px 0 20px 0;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+    color: #000;
+    font-weight: bold;
+    background: transparent;
+}
+.buttons button:hover {
+    width: 50%;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0px 0px 10px 5px #000;
+}
