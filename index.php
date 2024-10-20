@@ -57,7 +57,7 @@
                         echo '
                         
                         <tr>
-                        <td>' . $row["id"] . '</td>
+                        <td style="background-color: #000; color: #fff;">' . $row["id"] . '</td>
                         <td>' . $row["title"] . '</td>
                         <td>' . $row["author"] . '</td>
                         <td>' . $row["genre"] . '</td>
