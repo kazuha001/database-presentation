@@ -17,7 +17,7 @@
             <h1>BOOK's Library</h1>
 
             <div class="search_box">
-                <form method="POST" action="search.php">
+                <form method="POST" action="">
                     <input type="number" id="search" name="search" placeholder="Search Books I.D.">
                     <button type="submit">Search</button>
                 </form>
@@ -43,53 +43,67 @@
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
-                $sql = $conn->prepare("SELECT * FROM book");
-                $sql->execute();
 
-                $result = $sql->get_result();
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                if($result->num_rows > 0) {
+                    $search = $_POST["search"];
 
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);
-
-                    foreach($rows as $row) {
-
-                        echo '
-                        
-                        <tr>
-                        <td>' . $row["id"] . '</td>
-                        <td>' . $row["title"] . '</td>
-                        <td>' . $row["author"] . '</td>
-                        <td>' . $row["genre"] . '</td>
-                        <td>' . $row["publisher"] . '</td>
-                        <td>' . $row["publisherAddress"] . '</td>
-                        <td>' . $row["stock"] . '</td>
-                        <td>
-                            <form id="delete">
-                                <button type="submit">Delete</button>
-                                <input type="hidden" name="delete" value="' . $row["id"] . '"> 
-                            </form>
-                            <form method="POST" action="update.php">
-                                <button type="submit">Edit</button>
-                                <input type="hidden" name="update" value="' . $row["id"] . '"> 
-                            </form>
+                    $sql = $conn->prepare("SELECT * FROM book WHERE id = ?");
+                    $sql->bind_param("i", $search);
+                    $sql->execute();
+    
+                    $result = $sql->get_result();
+    
+                    if($result->num_rows > 0) {
+    
+                        while($row = $result->fetch_assoc()) {
+    
+                            echo '
                             
-                        </td>
-                    </tr>
-                        
-                        
-                        ';
+                            <tr>
+                            <td>' . $row["id"] . '</td>
+                            <td>' . $row["title"] . '</td>
+                            <td>' . $row["author"] . '</td>
+                            <td>' . $row["genre"] . '</td>
+                            <td>' . $row["publisher"] . '</td>
+                            <td>' . $row["publisherAddress"] . '</td>
+                            <td>' . $row["stock"] . '</td>
+                            <td>
+                                <form id="delete">
+                                    <button type="submit">Delete</button>
+                                    <input type="hidden" name="delete" value="' . $row["id"] . '"> 
+                                </form>
+                                <form method="POST" action="">
+                                    <button type="submit">Update</button>
+                                    <input type="hidden" name="delete" value="' . $row["id"] . '"> 
+                                </form>
+                                
+                            </td>
+                        </tr>
+                            
+                            
+                            ';
+    
+                        }
 
+                        
+    
+                    } else{
+                        echo '
+                            <h2>No Books are Existing with this ID</h2>
+                        ';
                     }
 
                 }
+
+               
                 
                 
                 
                 ?>
                     
-                   
-                </tbody>
+                    </tbody>
+                
             </table>
             <div class="newBooks">
                 <h1>Add Another Books</h1>

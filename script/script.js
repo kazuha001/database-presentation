@@ -31,3 +31,4 @@ document.getElementById("delete").addEventListener("submit", function(event){
     window.location.reload()
 
 })
+
