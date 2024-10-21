@@ -72,9 +72,10 @@
                         
     
                     } 
-
+                $sql->close();
                 }
                 
+                $conn->close();
                 
                 ?>
                     

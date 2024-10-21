@@ -81,10 +81,10 @@
                         ';
 
                     }
-
+                    $sql->close();
                 }
                 
-                
+                $conn->close();
                 
                 ?>
                     

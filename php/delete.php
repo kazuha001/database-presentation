@@ -14,10 +14,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $sql = $conn->prepare("DELETE FROM book WHERE id = ?");
     $sql->bind_param("i", $deleteId);
     $sql->execute();
-
+    $sql->close();
 }
 
 
+$conn->close();
 
 
 ?>

@@ -93,11 +93,11 @@
                             <h2>No Books are Existing with this ID</h2>
                         ';
                     }
-
+                    $sql->close();
                 }
 
                
-                
+                $conn->close();
                 
                 
                 ?>
