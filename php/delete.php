@@ -15,6 +15,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $sql->bind_param("i", $deleteId);
     $sql->execute();
     $sql->close();
+
+    header('Location: http://localhost/bethel-presentation-main/indexmain.php');
 }
 
 

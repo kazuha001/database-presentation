@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    margin: 15px;
 }
 .tables h1 {
     margin: 0px 0px 15px 0px;
