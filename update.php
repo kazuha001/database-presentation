@@ -60,7 +60,6 @@
                         <button type="submit">Submit</button>
                     </div>
                     
-                    <a href="index.html">About 1st Normal Form and 2nd Normal Form</a>
                     <input type="hidden" name="updateS1" value="' . $row["id"] . '" required>
                     </form>
                     </div>
